@@ -1,0 +1,17 @@
+<h1><%= @restaurant.name %> Details</h1>
+<ul class="list-group py-3">
+  <li class="list-group-item">Address: <%= @restaurant.address %></li>
+  <li class="list-group-item">Phone Number: <%= @restaurant.phone_number %></li>
+  <li class="list-group-item">Category: <%= @restaurant.category.capitalize %></li>
+</ul>
+<h2>Reviews</h2>
+<%= link_to "Write Review", to: new_review_path(@restaurant) %>
+<ul class="list-group py-3">
+  <% @reviews.each do |review| %>
+    <li class="list-group-item">
+    <>
+      <p class="text-right">Rating: <%= review.rating %></p>
+      <p class="text-left">Content: <%= review.content %></p>
+    </li>
+  <% end %>
+</ul>

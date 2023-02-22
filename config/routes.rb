@@ -6,8 +6,8 @@ Rails.application.routes.draw do
   # Show
   get 'restaurants/:id', to: 'restaurants#show', as: :restaurant
   # Create Review
-  get 'restaurants/:restaurant_id/reviews/new', to: 'reviews#new', as: :new_review
-  post 'restaurants/:restaurant_id/reviews', to: 'reviews#create'
+  get 'restaurants/:id/reviews/new', to: 'restaurants#new_review', as: :new_review
+  post 'restaurants/:id/reviews', to: 'restaurants#create_review'
 
   # Defines the root path route ("/")
   # Restaurant List

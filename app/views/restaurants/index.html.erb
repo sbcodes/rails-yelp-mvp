@@ -1,6 +1,8 @@
 <h1>Restaurants</h1>
 <ul class="list-group">
   <% Restaurant.all.each do |restaurant| %>
-  <li class="list-group-item"><%= link_to restaurant.name, restaurant_path(restaurant)%></li>
+  <li class="list-group-item">
+    <%= link_to restaurant.name, restaurant_path(restaurant)%>
+  </li>
   <% end %>
 </ul>
