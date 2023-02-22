@@ -3,8 +3,7 @@ class CreateReviews < ActiveRecord::Migration[7.0]
     create_table :reviews do |t|
       t.integer :rating
       t.string :content
-      t.string :author
-      t.integer :restaurant_id
+      add_reference :restaurant, :review, index: true
 
       t.timestamps
     end
